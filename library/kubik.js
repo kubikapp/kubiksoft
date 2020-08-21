@@ -119,6 +119,24 @@ function getSystemInfo(){
     return info;
 }
 
+/** Password Function **/
+
+function checkPassword(newPassword){
+    
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+    var description = [];
+
+    if(newPassword.length<8){description.push("Password minimal 8 karakter");}
+    if(!newPassword.match(upperCaseLetters)){description.push("Password harus memiliki huruf besar");}
+    if(!newPassword.match(lowerCaseLetters)){description.push("Password harus memiliki huruf kecil");}
+    if(!newPassword.match(numbers)){description.push("Password harus memiliki angka");}
+
+    return description;
+
+}
+
 /** Bonita Function **/
 
     // Get URL Process
