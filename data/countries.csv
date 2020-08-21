@@ -101,7 +101,7 @@ KH,Cambodia,KHR,Riel,+855
 CM,Cameroon,XAF,CFA Franc BEAC,+237
 CF,Central African Republic,XAF,CFA Franc BEAC,+236
 TD,Chad,XAF,CFA Franc BEAC,+235
-CG,Congo Republic of the Democratic,XAF,CFA Franc BEAC,+242
+CG,Congo,XAF,CFA Franc BEAC,+242
 GQ,Equatorial Guinea,XAF,CFA Franc BEAC,+240
 GA,Gabon,XAF,CFA Franc BEAC,+241
 CV,Cape Verde,CVE,Escudo,+238
@@ -110,7 +110,7 @@ CL,Chile,CLP,Chilean Peso,+56
 CN,China,CNY,Yuan Renminbi,+86
 CO,Colombia,COP,Peso,+57
 KM,Comoros,KMF,Comoran Franc,+269
-CD,Congo-Brazzaville,CDF,Congolese Frank,+243
+CD,The Democratic Republic of the Congo,CDF,Congolese Frank,+243
 CR,Costa Rica,CRC,Costa Rican Colon,+506
 HR,Croatia (Hrvatska),HRK,Croatian Dinar,+385
 CU,Cuba,CUP,Cuban Peso,+53
@@ -155,7 +155,6 @@ KP,Korea North,KPW,Won,+850
 KR,Korea South,KRW,Won,+82
 KW,Kuwait,KWD,Kuwaiti Dinar,+965
 KG,Kyrgyzstan,KGS,Som,+996
-LA,Lao PeopleÕs Democratic Republic,LAK,Kip,+856
 LV,Latvia,LVL,Lat,+371
 LB,Lebanon,LBP,Lebanese Pound,+961
 LS,Lesotho,LSL,Loti,+266
@@ -235,12 +234,10 @@ AX,Aland Islands,EUR,Euro,+358
 AO,Angola,AOA,Angolan kwanza,+244
 AQ,Antarctica,AQD,Antarctican dollar,+672
 BA,Bosnia and Herzegovina,BAM,Bosnia and Herzegovina convertible mark,+387
-CD,Congo (Kinshasa),CDF,Congolese Frank,+243
 GH,Ghana,GHS,Ghana cedi,+233
 GG,Guernsey,GGP,Guernsey pound,+44
 IM,Isle of Man,GBP,Manx pound,+44
 LA,Laos,LAK,Lao kip,+856
-MO,Macao S.A.R.,MOP,Macanese pataca,+853
 ME,Montenegro,EUR,Euro,+382
 PS,Palestinian Territory,JOD,Jordanian dinar,+970
 BL,Saint Barthelemy,EUR,Euro,+590
@@ -248,4 +245,3 @@ SH,Saint Helena,GBP,Saint Helena pound,+290
 MF,Saint Martin (French part),ANG,Netherlands Antillean guilder,+590
 PM,Saint Pierre and Miquelon,EUR,Euro,+508
 RS,Serbia,RSD,Serbian dinar,+381
-USAF,US Armed Forces,USD,US Dollar,Unknown
