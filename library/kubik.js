@@ -1,7 +1,6 @@
 /** System Function **/
 
 function getSystemInfo() {
-    'use strict';
     
     var module = {
         options: [],
