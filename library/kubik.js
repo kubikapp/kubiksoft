@@ -91,17 +91,19 @@ function getSystemInfo(){
     
     /** Check Device **/
 
+    if(e.os.name!="unknown"){osSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
+    else(osSupported = "<p class='text-danger'><i class='glyphicon glyphicon-info-sign'></i> Not supported</p>";)
+    
     if(e.os.name == "iPad" || e.os.name == "iPhone"){osLogo = "apple";}
-    if(e.os.name){osSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
     
     /** Check Browser **/
     if(e.browser.name == "Firefox" || e.browser.name == "Mozilla"){browserLogo = "firefox";}
     else if(e.browser.name == "Internet Explorer"){browserLogo = "ie";}
     else if(e.browser.name == "Microsoft Edge"){browserLogo = "edge";}
 
-    if(e.browser.name){
+    if(e.browser.name!="unknown"){
         if(e.browser.name=="Internet Explorer" && e.browser.version>=11){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
-        if(e.browser.name=="Internet Explorer" && e.browser.version<11){browserSupported = "<p class='text-danger'><i class='glyphicon glyphicon-info-sign'></i> Not Supported</p>";}
+        else if(e.browser.name=="Internet Explorer" && e.browser.version<11){browserSupported = "<p class='text-danger'><i class='glyphicon glyphicon-info-sign'></i> Not Supported</p>";}
         else if(e.browser.name=="Chrome" && e.browser.version>=61){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
         else if(e.browser.name=="Firefox" && e.browser.version>=61){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
         else if(e.browser.name=="Microsoft Edge" && e.browser.version>=61){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
