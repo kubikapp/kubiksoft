@@ -128,10 +128,10 @@ function checkPassword(newPassword){
     var numbers = /[0-9]/g;
     var description = [];
 
-    if(newPassword.length<8){description.push("Password minimal 8 karakter");}
-    if(!newPassword.match(upperCaseLetters)){description.push("Password harus memiliki huruf besar");}
-    if(!newPassword.match(lowerCaseLetters)){description.push("Password harus memiliki huruf kecil");}
-    if(!newPassword.match(numbers)){description.push("Password harus memiliki angka");}
+    if(newPassword.length<8){description.push("<b>Password</b> minimum 8 character");}
+    if(!newPassword.match(upperCaseLetters)){description.push("<b>Password</b> must have uppercase letter");}
+    if(!newPassword.match(lowerCaseLetters)){description.push("<b>Password</b> must have lowercase letter");}
+    if(!newPassword.match(numbers)){description.push("<b>Password</b> must have number");}
 
     return description;
 
