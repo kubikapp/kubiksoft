@@ -78,12 +78,12 @@ function getSystemInfo(){
         }
     };
     
-    
     var e = specs.init(),
         displayOs = '',
         displayBrowser= '',
         osLogo = e.os.name.toLowerCase(),
-        browserLogo = e.browser.name.toLowerCase();
+        browserLogo = e.browser.name.toLowerCase(),
+        imgPath = "https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/";
     
     if(e.os.name == "iPad" || e.os.name == "iPhone"){
         osLogo = "apple";
@@ -93,8 +93,8 @@ function getSystemInfo(){
         browserLogo = "firefox";
     }
     
-    displayOs += '<img src="https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/'+osLogo+'.png" width="150px"></img><br/><br/><h4>'+e.os.name + ' ' + e.os.version+ '</h4><br/>';
-    displayBrowser += '<img src="https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/'+browserLogo+'.png" width="150px"></img><br/><br/><h4>'+e.browser.name + ' '+ e.browser.version +'</h4><br/>';
+    displayOs += '<img src="'+imgPath+osLogo+'.png" width="150px"></img><br/><br/><h4>'+e.os.name + ' ' + e.os.version+ '</h4><br/>';
+    displayBrowser += '<img src="'+imgPath+browserLogo+'.png" width="150px"></img><br/><br/><h4>'+e.browser.name + ' '+ e.browser.version +'</h4><br/>';
     
     /**
     debug += '<br/>';
