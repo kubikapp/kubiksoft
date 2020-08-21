@@ -89,7 +89,7 @@ function getSystemInfo() {
     debug += 'navigator.vendor = ' + navigator.vendor + '<br/>';
     
     return debug;
-};
+}
 
 /** Bonita Function **/
 
