@@ -21,7 +21,9 @@ function getBrowser(){
             { name: 'Firefox', value: 'Firefox', version: 'Firefox' },
             { name: 'Safari', value: 'Safari', version: 'Version' },
             { name: 'Opera', value: 'Opera', version: 'Opera' },
-            { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' }
+            { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' },
+            { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
+            { name: 'Microsoft Edge', value: 'Edg', version : 'Edg'}
         ];
 }
 
@@ -83,18 +85,31 @@ function getSystemInfo(){
         displayBrowser= '',
         osLogo = e.os.name.toLowerCase(),
         browserLogo = e.browser.name.toLowerCase(),
-        imgPath = "https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/";
+        imgPath = "https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/",
+        osSupported = "",
+        browserSupported = "",;
     
-    if(e.os.name == "iPad" || e.os.name == "iPhone"){
-        osLogo = "apple";
+    /** Check Device **/
+
+    if(e.os.name == "iPad" || e.os.name == "iPhone"){osLogo = "apple";}
+    if(e.os.name){osSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
+    
+    /** Check Browser **/
+    if(e.browser.name == "Firefox" || e.browser.name == "Mozilla"){browserLogo = "firefox";}
+    else if(e.browser.name == "Internet Explorer"){browserLogo = "ie";}
+    else if(e.browser.name == "Microsoft Edge"){browserLogo = "edge";}
+
+    if(e.browser.name){
+        if(e.browser.name=="Internet Explorer" && e.browser.version>=11){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
+        if(e.browser.name=="Internet Explorer" && e.browser.version<11){browserSupported = "<p class='text-danger'><i class='glyphicon glyphicon-info-sign'></i> Not Supported</p>";}
+        else if(e.browser.name=="Chrome" && e.browser.version>=61){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
+        else if(e.browser.name=="Firefox" && e.browser.version>=61){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
+        else if(e.browser.name=="Microsoft Edge" && e.browser.version>=61){browserSupported = "<p class='text-success'><i class='glyphicon glyphicon-thumbs-up'></i> Supported</p>";}
+        else{browserSupported = "<p class='text-info'><i class='glyphicon glyphicon-info-sign'></i> Not supported but should be running</p>";}
     }
     
-    if(e.browser.name == "Firefox" || e.browser.name == "Mozilla"){
-        browserLogo = "firefox";
-    }
-    
-    displayOs += '<img src="'+imgPath+osLogo+'.png" width="150px"></img><br/><br/><h4>'+e.os.name + ' ' + e.os.version+ '</h4><br/>';
-    displayBrowser += '<img src="'+imgPath+browserLogo+'.png" width="150px"></img><br/><br/><h4>'+e.browser.name + ' '+ e.browser.version +'</h4><br/>';
+    displayOs += '<img src="'+imgPath+osLogo+'.png" width="150px"></img><br/><br/><h4>'+e.os.name + ' ' + e.os.version+ '</h4><br/>'+osSupported+'<br/>';
+    displayBrowser += '<img src="'+imgPath+browserLogo+'.png" width="150px"></img><br/><br/><h4>'+e.browser.name + ' '+ e.browser.version +'</h4><br/>'+browserSupported+'<br/>';
     
     /**
     debug += '<br/>';
