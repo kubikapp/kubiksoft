@@ -87,7 +87,7 @@ function getSystemInfo(){
         browserLogo = e.browser.name.toLowerCase(),
         imgPath = "https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/",
         osSupported = "",
-        browserSupported = "",;
+        browserSupported = "";
     
     /** Check Device **/
 
