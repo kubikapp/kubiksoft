@@ -25,6 +25,100 @@ function getBrowser(){
         ];
 }
 
+function getSystemInfo(){
+        var specs = {
+        options: [],
+        header: [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera],
+        dataos:getOS(),
+        databrowser:getBrowser(),
+        init: function () {
+            var agent = this.header.join(' '),
+                os = this.matchItem(agent, this.dataos),
+                browser = this.matchItem(agent, this.databrowser);
+            
+            return { os: os, browser: browser };
+        },
+        matchItem: function (string, data) {
+            var i = 0,
+                j = 0,
+                html = '',
+                regex,
+                regexv,
+                match,
+                matches,
+                version;
+            
+            for (i = 0; i < data.length; i += 1) {
+                regex = new RegExp(data[i].value, 'i');
+                match = regex.test(string);
+                if (match) {
+                    regexv = new RegExp(data[i].version + '[- /:;]([\\d._]+)', 'i');
+                    matches = string.match(regexv);
+                    version = '';
+                    if (matches) { if (matches[1]) { matches = matches[1]; } }
+                    if (matches) {
+                        matches = matches.split(/[._]+/);
+                        for (j = 0; j < matches.length; j += 1) {
+                            if (j === 0) {
+                                version += matches[j] + '.';
+                            } else {
+                                version += matches[j];
+                            }
+                        }
+                    } else {
+                        version = '0';
+                    }
+                    return {
+                        name: data[i].name,
+                        version: parseFloat(version)
+                    };
+                }
+            }
+            return { name: 'unknown', version: 0 };
+        }
+    };
+    
+    
+    var e = specs.init(),
+        displayOs = '',
+        displayBrowser= '',
+        osLogo = e.os.name.toLowerCase(),
+        browserLogo = e.browser.name.toLowerCase();
+    
+    if(e.os.name == "iPad" || e.os.name == "iPhone"){
+        osLogo = "apple";
+    }
+    
+    if(e.browser.name == "Firefox" || e.browser.name == "Mozilla"){
+        browserLogo = "firefox";
+    }
+    
+    displayOs += '<img src="https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/'+osLogo+'.png" width="150px"></img><br/><br/><h4>'+e.os.name + ' ' + e.os.version+ '</h4><br/>';
+    displayBrowser += '<img src="https://rawgit.com/arnoldjokerboy/kubiksoft/master/image/'+browserLogo+'.png" width="150px"></img><br/><br/><h4>'+e.browser.name + ' '+ e.browser.version +'</h4><br/>';
+    
+    /**
+    debug += '<br/>';
+    debug += 'navigator.userAgent = ' + navigator.userAgent + '<br/>';
+    debug += 'navigator.appVersion = ' + navigator.appVersion + '<br/>';
+    debug += 'navigator.platform = ' + navigator.platform + '<br/>';
+    debug += 'navigator.vendor = ' + navigator.vendor + '<br/>';
+    **/
+    var info={
+        os:{
+            name:e.os.name,
+            version:e.os.version,
+            display:displayOs
+        },
+        browser:{
+            name:e.browser.name,
+            version:e.browser.version,
+            display:displayBrowser
+        }
+    };
+    
+    return info;
+}
+
 /** Bonita Function **/
 
     // Get URL Process
