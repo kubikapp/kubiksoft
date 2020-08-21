@@ -17,13 +17,13 @@ function getOS(){
 
 function getBrowser(){
     return [
+            { name: 'Microsoft Edge', value: 'Edg', version : 'Edg'},
             { name: 'Chrome', value: 'Chrome', version: 'Chrome' },
             { name: 'Firefox', value: 'Firefox', version: 'Firefox' },
             { name: 'Safari', value: 'Safari', version: 'Version' },
             { name: 'Opera', value: 'Opera', version: 'Opera' },
             { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' },
-            { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
-            { name: 'Microsoft Edge', value: 'Edg', version : 'Edg'}
+            { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' }
         ];
 }
 
