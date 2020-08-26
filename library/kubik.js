@@ -209,7 +209,7 @@ function checkPassword(newPassword){
     		    description = "pdf";
     		}
     		
-    		if(allowedType.indexOf(contentType) < 0){
+    		if(allowedType.indexOf(document.contentType) < 0){
 				validation.isValid = false;
 				validation.description = "File only accepted " + description + ".";
 			}
