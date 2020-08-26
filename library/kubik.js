@@ -187,7 +187,7 @@ function checkPassword(newPassword){
 			"description":""
 		};
     	
-    	if(document.length>0 || document!==null){
+    	if(document.length>0 || document!=null){
     		
     		var allowedType = [];
     		var description = "";
