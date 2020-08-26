@@ -180,15 +180,14 @@ function checkPassword(newPassword){
     }
 
     // Cek File
-    function cekFile(docType,contentType){
+    function cekFile(docType,document){
     	
     	var validation = {
 			"isValid":true,
 			"description":""
 		};
     	
-    	if(contentType.length===0 || contentType===null){return true}
-    	else{
+    	if(document.length>0 || document!==null){
     		
     		var allowedType = [];
     		var description = "";
