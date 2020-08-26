@@ -182,12 +182,17 @@ function checkPassword(newPassword){
     // Cek File
     function cekFile(docType,document){
     	
-    	var validation = {
-			"isValid":true,
-			"description":""
-		};
+    	var hasDoc = false,
+            validation = {
+    			"isValid":true,
+    			"description":""
+    		};
     	
-    	if(document.length>0 || document!=null){
+        for(var contentType in $data.profilePicDocumentInput){
+            hasDoc = true;
+          }
+
+    	if(hasDoc){
     		
     		var allowedType = [];
     		var description = "";
