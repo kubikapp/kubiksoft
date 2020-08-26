@@ -188,7 +188,7 @@ function checkPassword(newPassword){
     			"description":""
     		};
     	
-        for(var contentType in $data.profilePicDocumentInput){
+        for(var contentType in document){
             hasDoc = true;
           }
 
