@@ -136,12 +136,12 @@ function checkPassword(newPassword){
     var lowerCaseLetters = /[a-z]/g;
     var upperCaseLetters = /[A-Z]/g;
     var numbers = /[0-9]/g;
-    var description = [];
+    var description = "";
 
-    if(newPassword.length<8){description.push("<b>Password</b> minimum 8 character");}
-    if(!newPassword.match(upperCaseLetters)){description.push("<b>Password</b> must have uppercase letter");}
-    if(!newPassword.match(lowerCaseLetters)){description.push("<b>Password</b> must have lowercase letter");}
-    if(!newPassword.match(numbers)){description.push("<b>Password</b> must have number");}
+    if(newPassword.length<8){description = description + "<li><b>Password</b> minimum 8 character</li>";}
+    if(!newPassword.match(upperCaseLetters)){description = description +"<li><b>Password</b> must have uppercase letter</li>";}
+    if(!newPassword.match(lowerCaseLetters)){description = description +"<li><b>Password</b> must have lowercase letter</li>";}
+    if(!newPassword.match(numbers)){description = description + "<li><b>Password</b> must have number</li>";}
 
     return description;
 
@@ -397,4 +397,20 @@ function checkPassword(newPassword){
       }).concat().join('').split('').sort(function(){
         return 0.5-Math.random();
       }).join('');
+    }
+    
+    function generateMonths(lang){
+        
+        var i=1,
+            listMonth=[],
+            optionMonth=[];
+        
+        if(lang=="en"){listMonth=["January","February","March","April","May","June","July","August","September","October","November","December"];}
+        else if(lang=="id"){listMonth=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"]}
+        
+        for(i=1;i<=12;i++){
+            optionMonth.push({"label":listMonth[i-1],"value":i});
+        }
+        
+        return optionMonth;
     }
