@@ -187,51 +187,57 @@ function checkPassword(newPassword){
 
     // Cek File
     function cekFile(docType,document){
-        
-        var hasDoc = false,
+    	
+    	var hasDoc = false,
             validation = {
-                "isValid":true,
-                "description":""
-            };
-        
+    			"isValid":true,
+    			"description":""
+    		};
+    	
         for(var contentType in document){
             hasDoc = true;
           }
 
-        if(hasDoc){
-            
-            var allowedType = [];
-            var description = "";
-            
-            if(docType == "attachment"){
-                allowedType = ["application/pdf","image/png","image/jpeg","image/gif","image/svg+xml","image/bmp","image/wbmp","image/tga"];
-                description = "pdf, png, jpeg, gif, svg, bmp, wbmp and tga";
-            }
-            else if(docType == "data"){
-                allowedType = ["text/csv","text/plain","application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
-                description = "csv and txt";
-            }
-            else if(docType == "image"){
-                allowedType = ["image/png","image/jpeg","image/gif","image/svg+xml","image/bmp","image/wbmp","image/tga"];
-                description = "png, jpeg, gif, svg, bmp, wbmp and tga";
-            }
-            else if(docType == "pdf"){
-                allowedType = ["application/pdf"];
-                description = "pdf";
-            }
-            
-            if(allowedType.indexOf(document.contentType) < 0){
-                validation.isValid = false;
-                validation.description = "File only accepted " + description + ".";
-            }
-        }
-        
-        return validation;
+    	if(hasDoc){
+    		
+    		var allowedType = [];
+    		var description = "";
+    		
+    		if(docType == "attachment"){
+    		    allowedType = ["application/pdf","image/png","image/jpeg","image/gif","image/svg+xml","image/bmp","image/wbmp","image/tga"];
+    		    description = "pdf, png, jpeg, gif, svg, bmp, wbmp and tga";
+    		}
+    		else if(docType == "data"){
+    		    allowedType = ["text/csv","text/plain","application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
+    		    description = "csv and txt";
+    		}
+    		else if(docType == "image"){
+    		    allowedType = ["image/png","image/jpeg","image/gif","image/svg+xml","image/bmp","image/wbmp","image/tga"];
+    		    description = "png, jpeg, gif, svg, bmp, wbmp and tga";
+    		}
+    		else if(docType == "pdf"){
+    		    allowedType = ["application/pdf"];
+    		    description = "pdf";
+    		}
+    		
+    		if(allowedType.indexOf(document.contentType) < 0){
+				validation.isValid = false;
+				validation.description = "File only accepted " + description + ".";
+			}
+    	}
+    	
+    	return validation;
     }
 
     // Get Document
     function getDocumentURL(contentStorageId){
         return "/bonita/portal/formsDocumentImage?document="+contentStorageId.toString();
+    }
+    
+    function showBadge(number){
+        var badge = '<span class="badge ArtifactSection-badge" >'+ parseInt(number) +'</span>';
+        
+        return badge;
     }
 
 /** Array Function **/
