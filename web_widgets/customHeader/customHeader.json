@@ -1,0 +1,78 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customHeader",
+  "name" : "header",
+  "lastUpdate" : 1611890828799,
+  "template" : "@customHeader.tpl.html",
+  "controller" : "@customHeader.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Header",
+      "name" : "header",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Sub Header",
+      "name" : "subHeader",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Icon Class",
+      "name" : "iconClass",
+      "caption" : "Glyphicon or font awesome icon class",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Show Return",
+      "name" : "showReturn",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Return URL",
+      "name" : "returnURL",
+      "caption" : "URL to return previous page",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Line Separator",
+      "name" : "lineSeparator",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "59203ff6-1af4-41bf-8394-d9c011c65a76",
+      "name" : "fontawesome.js",
+      "type" : "js",
+      "order" : 10,
+      "external" : false
+    },
+    {
+      "id" : "a09c8d95-6e29-4d5b-a83b-12bd5753c927",
+      "name" : "kubik.js",
+      "type" : "js",
+      "order" : 11,
+      "external" : false
+    },
+    {
+      "id" : "7567f0c8-d2ae-469d-a13b-7717f9ec6902",
+      "name" : "kubik.css",
+      "type" : "css",
+      "order" : 12,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

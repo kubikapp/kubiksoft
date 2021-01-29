@@ -1,0 +1,77 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customCardColor",
+  "name" : "cardColor",
+  "lastUpdate" : 1611890830237,
+  "template" : "@customCardColor.tpl.html",
+  "controller" : "@customCardColor.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Icon Class",
+      "name" : "iconClass",
+      "caption" : "Glyphicon or font awesome class",
+      "type" : "text",
+      "defaultValue" : "fa fa-arrow-up fa-2x",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Card Style",
+      "name" : "cardStyle",
+      "type" : "choice",
+      "defaultValue" : "1",
+      "choiceValues" : [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "primary",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "info",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Title",
+      "name" : "title",
+      "type" : "text",
+      "defaultValue" : "Total Income",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "defaultValue" : "$781,876",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "445fd091-a2a1-47c6-b1b3-b89a823ad113",
+      "name" : "fontawesome-all.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

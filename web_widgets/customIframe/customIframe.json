@@ -1,0 +1,36 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customIframe",
+  "name" : "iframe",
+  "lastUpdate" : 1611890829409,
+  "template" : "@customIframe.tpl.html",
+  "controller" : "@customIframe.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "URL",
+      "name" : "URL",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Width",
+      "name" : "width",
+      "type" : "text",
+      "defaultValue" : "450",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Height",
+      "name" : "height",
+      "type" : "text",
+      "defaultValue" : "250",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

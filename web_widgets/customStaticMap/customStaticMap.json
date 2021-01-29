@@ -1,0 +1,41 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customStaticMap",
+  "name" : "staticMap",
+  "lastUpdate" : 1611890830386,
+  "template" : "@customStaticMap.tpl.html",
+  "controller" : "@customStaticMap.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Key",
+      "name" : "key",
+      "type" : "text",
+      "defaultValue" : "AIzaSyDU330D7A7iv50z25wOCrsGr-alAzDqP1U",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Latitude",
+      "name" : "latitude",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Longitude",
+      "name" : "longitude",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "City",
+      "name" : "city",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

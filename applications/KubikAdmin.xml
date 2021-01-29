@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="administrator" version="1.0" profile="Administrator" homePage="log" state="ACTIVATED" layout="custompage_kubikAdminLayout" theme="custompage_themeBonita">
+        <displayName>Kubik Administrator</displayName>
+        <description>Kubik administrator for managing applications</description>
+        <iconPath></iconPath>
+        <applicationPages>
+            <applicationPage customPage="custompage_ADMInstall" token="install"/>
+            <applicationPage customPage="custompage_log" token="log"/>
+            <applicationPage customPage="custompage_UserCaseListBonitaV2" token="case"/>
+            <applicationPage customPage="custompage_processlistBonita" token="process"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="log">
+                <displayName>Log</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="case">
+                <displayName>Case</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="process">
+                <displayName>Process</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="install">
+                <displayName>Install</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

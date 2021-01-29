@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Kubik" description="Kubik application organization">
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>default_password</name>
+      <description>Default password flag</description>
+    </customUserInfoDefinition>
+    <customUserInfoDefinition>
+      <name>last_pass_update</name>
+      <description>Last password update date</description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
+  <users>
+    <user userName="kubik">
+      <firstName>Kubik</firstName>
+      <lastName>Administrator</lastName>
+      <jobTitle>Application Owner</jobTitle>
+      <manager></manager>
+      <personalData/>
+      <professionalData>
+        <email>kubiksoftapp@gmail.com</email>
+      </professionalData>
+      <password encrypted="false">Asdfg888*</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>default_password</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>last_pass_update</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+  </users>
+  <roles>
+    <role name="member">
+      <displayName>Member</displayName>
+      <description>Member of organization group</description>
+    </role>
+    <role name="head">
+      <displayName>Head</displayName>
+      <description>Head of organization group</description>
+    </role>
+  </roles>
+  <groups>
+    <group name="administrator">
+      <displayName>Administrator</displayName>
+      <description>Administrator of application</description>
+    </group>
+    <group name="finance">
+      <displayName>Finance</displayName>
+      <description>Finance division</description>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>kubik</userName>
+      <roleName>member</roleName>
+      <groupName>administrator</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

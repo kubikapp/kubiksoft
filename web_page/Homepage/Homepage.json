@@ -1,0 +1,551 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.46",
+  "id" : "Homepage",
+  "name" : "Homepage",
+  "lastUpdate" : 1611890829527,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "background" : {
+            "type" : "expression",
+            "value" : "headerUrl"
+          },
+          "title" : {
+            "type" : "expression",
+            "value" : "sysInfo[0].systemName"
+          },
+          "userlogin" : {
+            "type" : "expression",
+            "value" : "loggedUser.firstname + \" \" + loggedUser.lastname"
+          }
+        },
+        "reference" : "d8e05bf7-7e1c-4b7c-abf3-3666584423ec",
+        "hasValidationError" : false,
+        "id" : "customBanner"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "c1a98918-005e-40b2-98bb-c08e32732ca5",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Application Center"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 3"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "933d2502-bd41-4ddc-8b8a-e7c42addfa2f",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Search on name, version or URL"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "searchFilterValue"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "b7b24f74-fef5-465d-9b2c-80d692bfa363",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "860714d5-d45e-4cec-bc9f-02b4299db73a",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : ""
+                }
+              },
+              "reference" : "5e110332-ba8c-49ec-9dc8-f3a257c65770",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "allowedApps.length"
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "No application available, please contact your administrator"
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 4"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      }
+                    },
+                    "reference" : "8eb007a4-2397-4c66-aa84-8dba7ca2b656",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "col-lg-3 col-md-4 col-sm-4"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable",
+                        "value" : "allowedApps | filter:\"!User\" | filter:\"!Sistem Kinerja Sawit\" | filter: searchFilterValue"
+                      }
+                    },
+                    "reference" : "85117cff-6033-420d-b9c8-39012f01d667",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "title" : {
+                              "type" : "expression",
+                              "value" : "$item.displayName"
+                            },
+                            "background" : {
+                              "type" : "constant",
+                              "value" : "#022a50"
+                            },
+                            "url" : {
+                              "type" : "expression",
+                              "value" : "'/bonita/apps/'+$item.token"
+                            },
+                            "icon" : {
+                              "type" : "constant",
+                              "value" : "fas fa-cube"
+                            }
+                          },
+                          "reference" : "acd3ce3b-c487-4d9e-95fd-d614db9b7f24",
+                          "hasValidationError" : false,
+                          "id" : "customCardMenu"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "74b7284b-11e9-4516-8474-016bcff1a09e",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "ecb3c40e-a741-441d-a10e-9316e17aa9c6",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "userLogin" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "userInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{loggedUser.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "membership" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/membership?p=0&c=100&f=user_id={{loggedUser.id}}&d=group_id"
+      ],
+      "exposed" : false
+    },
+    "allowedApps" : {
+      "type" : "expression",
+      "value" : [
+        "var i=0;",
+        "var myApps = [];",
+        "",
+        "for(i=0;i<$data.authorizedAppsList.length;i++){",
+        "    ",
+        "    var app = $data.authorizedAppsList[i];",
+        "    ",
+        "    var j=0;",
+        "    ",
+        "    for(j=0;j<$data.listApplicationAccess.length;j++){",
+        "        ",
+        "        var access = $data.listApplicationAccess[j];",
+        "        ",
+        "        if(access.appId==app.id){",
+        "        ",
+        "            var k=0;",
+        "            for(k=0;k<$data.membership.length;k++){",
+        "                ",
+        "                var member = $data.membership[k];",
+        "                ",
+        "                if(member.group_id.id == access.groupId){",
+        "                    if(myApps.indexOf(app)<0){myApps.push(app);}",
+        "                }",
+        "            }",
+        "        }",
+        "        ",
+        "    }",
+        "}",
+        "",
+        "return myApps;"
+      ],
+      "exposed" : false
+    },
+    "loggedUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{session.user_id}}?d=professional_data"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/unusedId"
+      ],
+      "exposed" : false
+    },
+    "appsList" : {
+      "type" : "url",
+      "value" : [
+        "../API/living/application?c=9999{{queryParamSearchFilter}}{{queryParamProfileFilter}}"
+      ],
+      "exposed" : false
+    },
+    "queryParamProfileFilter" : {
+      "type" : "expression",
+      "value" : [
+        "if(!$data.selectedProfile) {",
+        "    return \"\";",
+        "}",
+        "return \"&f=profileId=\"+$data.selectedProfile;"
+      ],
+      "exposed" : false
+    },
+    "queryParamSearchFilter" : {
+      "type" : "expression",
+      "value" : [
+        "if(!$data.searchFilterValue) {",
+        "    return \"\";",
+        "}",
+        "return \"&s=\"+$data.searchFilterValue;"
+      ],
+      "exposed" : false
+    },
+    "searchFilterValue" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "currentUserProfileList" : {
+      "type" : "url",
+      "value" : [
+        "../API/portal/profile?p=0&c=100&f=user_id={{loggedUser.id}}"
+      ],
+      "exposed" : false
+    },
+    "authorizedAppsList" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.currentUserProfileList || !$data.appsList) {",
+        "    return [];",
+        "}",
+        "",
+        "function isAppAuthorized(application) {",
+        "    return $data.currentUserProfileList.map((profile) => profile.id).includes(application.profileId);",
+        "}",
+        "",
+        "return $data.appsList.filter(application => isAppAuthorized(application));"
+      ],
+      "exposed" : false
+    },
+    "applicationContainerClasses" : {
+      "type" : "expression",
+      "value" : [
+        "return function (currentApp){",
+        "    var cssClasses = \"app-item \";",
+        "    ",
+        "    if(currentApp.token === $data.appToken){",
+        "        cssClasses += \"app-item--current\";",
+        "    }",
+        "    ",
+        "    return cssClasses;",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "headerUrl" : {
+      "type" : "expression",
+      "value" : [
+        "return \"data:image/png;base64,\"+$data.confMain[0].header;"
+      ],
+      "exposed" : false
+    },
+    "confMain" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [kubik.conf.Main]\",\"businessObjectName\":\"Main\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"kubik.conf.Main\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "sysInfo" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [kubik.conf.SystemInfo]\",\"businessObjectName\":\"SystemInfo\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"kubik.conf.SystemInfo\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "listApplicationAccess" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [kubik.conf.Application]\",\"businessObjectName\":\"Application\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"kubik.conf.Application\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"500\"}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "2bfee3ad-6806-4e08-b1bc-0e89877dd81a",
+  "type" : "page",
+  "description" : "Application home landing page",
+  "displayName" : "Application Homepage"
+}

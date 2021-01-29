@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.11.4">
+    <businessObjects>
+        <businessObject qualifiedName="kubik.conf.Application">
+            <description>Application configuration</description>
+            <fields>
+                <field type="INTEGER" length="255" name="appId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="groupId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.Company">
+            <description>Company data</description>
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
+                <field type="STRING" length="50" name="addressLine1" nullable="false" collection="false"/>
+                <field type="STRING" length="50" name="addressLine2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="province" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="city" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="country" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="zipcode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="phone" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fax" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="logo" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.Email">
+            <description>SMTP email</description>
+            <fields>
+                <field type="STRING" length="255" name="smtpHost" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="smtpPort" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="password" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.ExternalBI">
+            <description>External business intelligence</description>
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="embedUrl" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="width" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="height" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_ExternalBI">
+                    <fieldNames>
+                        <fieldName>name</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.ExternalDB">
+            <description>External database</description>
+            <fields>
+                <field type="STRING" length="25" name="name" nullable="false" collection="false"/>
+                <field type="STRING" length="25" name="type" nullable="false" collection="false"/>
+                <field type="STRING" length="50" name="connectionString" nullable="false" collection="false"/>
+                <field type="STRING" length="25" name="username" nullable="false" collection="false"/>
+                <field type="STRING" length="25" name="password" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_ExternalDB">
+                    <description>Primary external database key</description>
+                    <fieldNames>
+                        <fieldName>name</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.ExternalService">
+            <description>External service</description>
+            <fields>
+                <field type="STRING" length="25" name="serviceName" nullable="false" collection="false"/>
+                <field type="STRING" length="50" name="apiKey" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_ExternalService">
+                    <description>Primary external service key</description>
+                    <fieldNames>
+                        <fieldName>serviceName</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.Main">
+            <description>Main configuration</description>
+            <fields>
+                <field type="STRING" length="10" name="dateFormat" nullable="false" collection="false"/>
+                <field type="STRING" length="10" name="timeFormat" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="currency" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="timezone" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="logo" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="header" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="closingDate" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.Security">
+            <description>Application Security</description>
+            <fields>
+                <field type="BOOLEAN" length="255" name="enablePassPolicy" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="enablePassExpired" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="passExpired" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="enablePassFirst" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="disableDormantUser" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="dormantUser" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.conf.SystemInfo">
+            <description>System information</description>
+            <fields>
+                <field type="STRING" length="255" name="systemName" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="helpUrl" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="systemUrl" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_SystemInfo">
+                    <fieldNames>
+                        <fieldName>systemName</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.customer.Customer">
+            <description>Customer data</description>
+            <fields>
+                <field type="STRING" length="255" name="id" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="type" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.general.Personal" fetchType="LAZY" name="personal" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.general.Contact" fetchType="LAZY" name="billing" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="picId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.finance.Invoice">
+            <description>Invoice for customer</description>
+            <fields>
+                <field type="STRING" length="255" name="id" nullable="false" collection="false">
+                    <description>Invoice unique ID</description>
+                </field>
+                <relationField type="AGGREGATION" reference="kubik.master.BillingType" fetchType="EAGER" name="billingType" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="refId" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dueDate" nullable="true" collection="false">
+                    <description>Due date of invoice</description>
+                </field>
+                <field type="LOCALDATE" length="255" name="invoiceDate" nullable="true" collection="false">
+                    <description>Invoice date when payer is notified</description>
+                </field>
+                <relationField type="AGGREGATION" reference="kubik.customer.Customer" fetchType="LAZY" name="payer" nullable="true" collection="false">
+                    <description>Payer of invoice</description>
+                </relationField>
+                <relationField type="AGGREGATION" reference="kubik.finance.Payment" fetchType="LAZY" name="payments" nullable="true" collection="true">
+                    <description>Payment history of billing</description>
+                </relationField>
+                <field type="DOUBLE" length="255" name="amount" nullable="true" collection="false">
+                    <description>Invoice amount based on reference ID</description>
+                </field>
+                <field type="DOUBLE" length="255" name="tax" nullable="true" collection="false">
+                    <description>Invoice tax amount</description>
+                </field>
+                <field type="DOUBLE" length="255" name="adjustment" nullable="true" collection="false">
+                    <description>Adjustment of invoice (e.g. round)</description>
+                </field>
+                <field type="DOUBLE" length="255" name="totalCharges" nullable="true" collection="false">
+                    <description>Total amount charges to payer</description>
+                </field>
+                <field type="DOUBLE" length="255" name="totalPaid" nullable="true" collection="false">
+                    <description>Total amount paid from payer</description>
+                </field>
+                <relationField type="AGGREGATION" reference="kubik.master.StatusInvoice" fetchType="EAGER" name="status" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isEmailNotif" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseId" nullable="true" collection="false">
+                    <description>Case Id of invoice</description>
+                </field>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Invoice">
+                    <description>Unique invoice ID</description>
+                    <fieldNames>
+                        <fieldName>id</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries>
+                <query name="findByLastId" content="SELECT i &#10;FROM Invoice i &#10;WHERE i.id LIKE :prefixId&#10;ORDER BY i.persistenceId DESC" returnType="java.util.List">
+                    <description>Find last ID based on prefix Id</description>
+                    <queryParameters>
+                        <queryParameter name="prefixId" className="java.lang.String"/>
+                    </queryParameters>
+                </query>
+                <query name="findByBillingCodeAndStatus" content="SELECT i &#10;FROM Invoice i &#10;WHERE i.billingType.code = :billingCode&#10;AND i.status.code &gt;= :statusCode&#10;ORDER BY i.dueDate ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="billingCode" className="java.lang.Integer"/>
+                        <queryParameter name="statusCode" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="countForFindByBillingCodeAndStatus" content="SELECT COUNT(i) &#10;FROM Invoice i &#10;WHERE i.billingType.code = :billingCode&#10;AND i.status.code &gt;= :statusCode" returnType="java.lang.Long">
+                    <queryParameters>
+                        <queryParameter name="billingCode" className="java.lang.Integer"/>
+                        <queryParameter name="statusCode" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.finance.Payment">
+            <fields>
+                <field type="STRING" length="255" name="id" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="paymentDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="paymentMethod" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="amount" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Payment">
+                    <description>Unique payment ID</description>
+                    <fieldNames>
+                        <fieldName>id</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.general.Contact">
+            <description>Address data</description>
+            <fields>
+                <field type="STRING" length="255" name="addressLine1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="addressLine2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="country" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="region" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="city" nullable="true" collection="false"/>
+                <field type="STRING" length="5" name="zipcode" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="phoneNumber" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="mobileNumber" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="faxNumber" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.general.Personal">
+            <description>Personal data</description>
+            <fields>
+                <field type="STRING" length="255" name="firstname" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="lastname" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="gender" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="birthday" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="marital" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="idCardType" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="idCardNumber" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.hr.Employee">
+            <description>Employee data</description>
+            <fields>
+                <field type="STRING" length="255" name="id" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="branchCode" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.general.Personal" fetchType="LAZY" name="personal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="jobTitle" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="supervisor" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.general.Contact" fetchType="LAZY" name="contact" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.general.Contact" fetchType="LAZY" name="emergencyContact" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="joinedDate" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseIdCreated" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseIdUpdated" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="kubik.hr.Salary" fetchType="LAZY" name="salary" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.hr.Salary">
+            <description>Employee salary component</description>
+            <fields>
+                <field type="STRING" length="255" name="component" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="frequency" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="amount" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.BillingType">
+            <fields>
+                <field type="INTEGER" length="255" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Branch">
+            <description>Master data of branch for application purpose</description>
+            <fields>
+                <field type="STRING" length="4" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="50" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.general.Contact" fetchType="EAGER" name="contact" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseInput" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseUpdate" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseDelete" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="picId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Branch">
+                    <description>Branch code must be unique</description>
+                    <fieldNames>
+                        <fieldName>code</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Country">
+            <description>Master data of country include dial code</description>
+            <fields>
+                <field type="STRING" length="2" name="code" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="dial_code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="currency" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Country">
+                    <description>Country code must be unique</description>
+                    <fieldNames>
+                        <fieldName>code</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Holiday">
+            <description>Holiday data</description>
+            <fields>
+                <field type="LOCALDATE" length="255" name="holidayDate" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Item">
+            <fields>
+                <field type="STRING" length="255" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="icon" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.master.UnitPrice" fetchType="EAGER" name="unitPrice" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="baseUnit" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.PaymentMethod">
+            <fields>
+                <field type="STRING" length="255" name="category" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="qrCode" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Service">
+            <fields>
+                <field type="STRING" length="255" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="icon" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="kubik.master.UnitPrice" fetchType="EAGER" name="unitPrice" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="baseUnit" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.StatusInvoice">
+            <fields>
+                <field type="INTEGER" length="255" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_StatusInvoice">
+                    <description>Unique status invoice code</description>
+                    <fieldNames>
+                        <fieldName>code</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Trx">
+            <fields>
+                <field type="STRING" length="2" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.Unit">
+            <fields>
+                <field type="STRING" length="255" name="unit" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="conversion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.UnitPrice">
+            <fields>
+                <field type="STRING" length="255" name="unit" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="price" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="kubik.master.WorkArea">
+            <description>Work area data</description>
+            <fields>
+                <field type="STRING" length="255" name="code" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="branch" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="isAvailable" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

@@ -1,0 +1,88 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customButtonGroupValue",
+  "name" : "buttonGroupValue",
+  "lastUpdate" : 1611890830189,
+  "template" : "@customButtonGroupValue.tpl.html",
+  "controller" : "@customButtonGroupValue.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "List Label",
+      "name" : "listLabel",
+      "type" : "collection",
+      "defaultValue" : [
+        "Left",
+        "Middle",
+        "Right"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "On Click",
+      "name" : "onClick",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Align",
+      "name" : "align",
+      "type" : "choice",
+      "defaultValue" : "left",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "default",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "info",
+        "warning",
+        "success",
+        "danger",
+        "link"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Active",
+      "name" : "active",
+      "type" : "choice",
+      "defaultValue" : "success",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "info",
+        "warning",
+        "success",
+        "danger",
+        "link"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "List Value",
+      "name" : "listValue",
+      "type" : "collection",
+      "defaultValue" : [
+        "1",
+        "2",
+        "3"
+      ],
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

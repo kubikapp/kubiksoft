@@ -1,0 +1,76 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.46",
+  "id" : "Test",
+  "name" : "Test",
+  "lastUpdate" : 1611890829968,
+  "rows" : [
+    [ ]
+  ],
+  "assets" : [
+    {
+      "id" : "3458c0bd-2924-44f9-a92d-1dab7204df0c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "6e2d05d5-0cd8-4d92-9488-171350c1be98",
+      "name" : "/bonita/kubik/library/kubik.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : true
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "profil" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findAnggota [org.bpdpks.anggota.Profil]\",\"businessObjectName\":\"undefined\",\"query\":{\"name\":\"findAnggota\",\"displayName\":\"findAnggota\"},\"id\":\"org.bpdpks.anggota.Profil\",\"filters\":[{\"name\":\"anggota\",\"type\":\"STRING\",\"collection\":false,\"value\":\"p1\"},{\"name\":\"isISPO\",\"type\":\"BOOLEAN\",\"collection\":false,\"value\":\"false\"}],\"pagination\":{\"p\":\"{{filter.p}}\",\"c\":\"{{filter.c}}\"}}"
+      ],
+      "exposed" : false
+    },
+    "totalProfil" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"countFindAnggota [org.bpdpks.anggota.Profil]\",\"businessObjectName\":\"Profil\",\"query\":{\"name\":\"countFindAnggota\",\"displayName\":\"countFindAnggota\"},\"id\":\"org.bpdpks.anggota.Profil\",\"filters\":[{\"name\":\"anggota\",\"type\":\"STRING\",\"collection\":false,\"value\":\"p1\"},{\"name\":\"isISPO\",\"type\":\"BOOLEAN\",\"collection\":false,\"value\":\"false\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "filter" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"p\":0,",
+        "    \"c\":1,",
+        "    \"total\":0",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "watcher" : {
+      "type" : "expression",
+      "value" : [
+        "$data.filter.total = $data.totalProfil[0];"
+      ],
+      "exposed" : false
+    },
+    "date" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "dateFormat" : {
+      "type" : "constant",
+      "value" : [
+        "dd-MM-yyyy"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "7b920691-205f-41f5-8b81-1777fe41f333",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

@@ -1,0 +1,39 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customSwitch",
+  "name" : "switch",
+  "lastUpdate" : 1611890830415,
+  "template" : "@customSwitch.tpl.html",
+  "controller" : "@customSwitch.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Switch",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Value",
+      "name" : "value",
+      "caption" : "Boolean value",
+      "type" : "text",
+      "defaultValue" : true,
+      "bond" : "variable"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "8c82da9c-bfa1-4bb7-9b8b-445c7dd13ea4",
+      "name" : "switch.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

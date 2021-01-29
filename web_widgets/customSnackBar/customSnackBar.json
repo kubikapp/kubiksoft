@@ -1,0 +1,67 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.40",
+  "id" : "customSnackBar",
+  "name" : "snackBar",
+  "lastUpdate" : 1611890829006,
+  "template" : "@customSnackBar.tpl.html",
+  "controller" : "@customSnackBar.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Message",
+      "name" : "message",
+      "type" : "text",
+      "defaultValue" : "This is the initial value",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Value",
+      "name" : "value",
+      "caption" : "Value to clear",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Show Close",
+      "name" : "showClose",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Close Icon Color",
+      "name" : "closeIconColor",
+      "type" : "text",
+      "defaultValue" : "#fff",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Background",
+      "name" : "background",
+      "type" : "choice",
+      "defaultValue" : "default",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "info",
+        "warning",
+        "danger",
+        "success"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "a0319235-5d19-46fb-99f1-4057dfb1802a",
+      "name" : "snackbar.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

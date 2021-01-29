@@ -1,0 +1,8 @@
+<!DOCTYPE HTML>
+<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-{{properties.style}}" role="progressbar" aria-valuenow="{{properties.value}}" aria-valuemin="0" aria-valuemax="{{properties.max}}" style="width: {{(properties.value/properties.max)*100}}%;">
+    {{properties.value}} {{properties.measure}}
+  </div>
+</div>

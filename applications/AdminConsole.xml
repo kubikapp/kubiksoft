@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="adminconsole" version="1.0" profile="User" homePage="configuration" state="ACTIVATED" layout="custompage_KubikLayout" theme="custompage_themeBonita">
+        <displayName>Admin Console</displayName>
+        <description>Application administrator console</description>
+        <iconPath></iconPath>
+        <applicationPages>
+            <applicationPage customPage="custompage_ADMConfiguration" token="configuration"/>
+            <applicationPage customPage="custompage_ADMUsers" token="users"/>
+            <applicationPage customPage="custompage_ADMApplication" token="application"/>
+            <applicationPage customPage="custompage_ADMIntegration" token="integration"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="configuration">
+                <displayName>Configuration</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="users">
+                <displayName>Users</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="application">
+                <displayName>Application</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="integration">
+                <displayName>Integration</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

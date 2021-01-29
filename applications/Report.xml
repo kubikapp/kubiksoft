@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="report" version="1.0" profile="User" homePage="dashboard" state="ACTIVATED" layout="custompage_KubikLayout" theme="custompage_themeBonita">
+        <displayName>Report</displayName>
+        <description>Report and analytic transaction</description>
+        <iconPath></iconPath>
+        <applicationPages>
+            <applicationPage customPage="custompage_BIDashboard" token="dashboard"/>
+            <applicationPage customPage="custompage_BIDisplay" token="display"/>
+        </applicationPages>
+        <applicationMenus/>
+    </application>
+</applications>

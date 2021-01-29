@@ -1,0 +1,42 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customBanner",
+  "name" : "banner",
+  "lastUpdate" : 1611890829516,
+  "template" : "@customBanner.tpl.html",
+  "controller" : "@customBanner.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Background URL",
+      "name" : "background",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Title",
+      "name" : "title",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "User Login Name",
+      "name" : "userlogin",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "7286571b-5759-40ca-86ed-afc90790973c",
+      "name" : "banner.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}
