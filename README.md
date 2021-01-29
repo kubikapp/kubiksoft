@@ -1,2 +1,0 @@
-# kubiksoft
-Kubiksoft application repository
