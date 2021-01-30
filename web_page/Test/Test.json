@@ -1,0 +1,397 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.46",
+  "id" : "Test",
+  "name" : "Test",
+  "lastUpdate" : 1611987729318,
+  "rows" : [
+    [
+      {
+        "type" : "modalContainer",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : "scan"
+          },
+          "size" : {
+            "type" : "constant",
+            "value" : "sm"
+          },
+          "animation" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "93275617-66ce-473d-9db6-f079810bb4b3",
+        "hasValidationError" : false,
+        "id" : "pbModalContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "596b345d-699d-4d14-bfe4-d812f58a54b2",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-header"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Scan QR"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 4"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "5e755b8d-f60c-400a-8ce2-6b08bf9fa5e8",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "5d155ea4-1d4d-4001-bc4a-6409534442a7",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "qrData"
+                        },
+                        "buttonLabel" : {
+                          "type" : "interpolation",
+                          "value" : "Open"
+                        },
+                        "style" : {
+                          "type" : "constant",
+                          "value" : "primary"
+                        },
+                        "height" : {
+                          "type" : "constant",
+                          "value" : "200"
+                        },
+                        "width" : {
+                          "type" : "constant",
+                          "value" : "270"
+                        }
+                      },
+                      "reference" : "e5105fc8-84ff-4350-a11a-f1924b577b68",
+                      "hasValidationError" : false,
+                      "id" : "customQrScanner"
+                    }
+                  ]
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "ddfa75f1-abef-40e5-9807-4c92edcbead0",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Scan"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "default"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "Open modal"
+                },
+                "assign" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "url" : {
+                  "type" : "interpolation"
+                },
+                "responseStatusCode" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "dataToSend" : {
+                  "type" : "constant"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "closeOnSuccess" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "dataFromError" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "modalId" : {
+                  "type" : "constant",
+                  "value" : "scan"
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "3928f5a3-8726-4cf9-af48-389781b70be2",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{qrData}}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "776ad439-0b99-4ca5-b59c-9dc1a93adac5",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "3458c0bd-2924-44f9-a92d-1dab7204df0c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "6e2d05d5-0cd8-4d92-9488-171350c1be98",
+      "name" : "/bonita/kubik/library/kubik.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : true
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "profil" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findAnggota [org.bpdpks.anggota.Profil]\",\"businessObjectName\":\"undefined\",\"query\":{\"name\":\"findAnggota\",\"displayName\":\"findAnggota\"},\"id\":\"org.bpdpks.anggota.Profil\",\"filters\":[{\"name\":\"anggota\",\"type\":\"STRING\",\"collection\":false,\"value\":\"p1\"},{\"name\":\"isISPO\",\"type\":\"BOOLEAN\",\"collection\":false,\"value\":\"false\"}],\"pagination\":{\"p\":\"{{filter.p}}\",\"c\":\"{{filter.c}}\"}}"
+      ],
+      "exposed" : false
+    },
+    "totalProfil" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"countFindAnggota [org.bpdpks.anggota.Profil]\",\"businessObjectName\":\"Profil\",\"query\":{\"name\":\"countFindAnggota\",\"displayName\":\"countFindAnggota\"},\"id\":\"org.bpdpks.anggota.Profil\",\"filters\":[{\"name\":\"anggota\",\"type\":\"STRING\",\"collection\":false,\"value\":\"p1\"},{\"name\":\"isISPO\",\"type\":\"BOOLEAN\",\"collection\":false,\"value\":\"false\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "filter" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"p\":0,",
+        "    \"c\":1,",
+        "    \"total\":0",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "watcher" : {
+      "type" : "expression",
+      "value" : [
+        "$data.filter.total = $data.totalProfil[0];"
+      ],
+      "exposed" : false
+    },
+    "qrData" : {
+      "type" : "constant",
+      "value" : [
+        "Test"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "7b920691-205f-41f5-8b81-1777fe41f333",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

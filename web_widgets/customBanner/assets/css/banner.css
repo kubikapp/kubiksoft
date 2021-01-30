@@ -1,0 +1,36 @@
+.banner-aboutus-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 42px 0 55px;
+    position: relative;
+    width:100%;
+}
+.banner-aboutus-img::before {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.banner-aboutus h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+    position: relative;
+    text-transform: capitalize;
+}
+.breadcrumbs_path {
+    color: #fff;
+    margin-top: 8px;
+    position: relative;
+    z-index: 9;
+}
+.breadcrumbs_path > a {
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}

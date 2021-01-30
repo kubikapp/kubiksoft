@@ -1,0 +1,45 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customPrevNextButton",
+  "name" : "prevNextButton",
+  "lastUpdate" : 1611890829903,
+  "template" : "@customPrevNextButton.tpl.html",
+  "controller" : "@customPrevNextButton.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "default",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "link",
+        "info",
+        "warning",
+        "danger"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Total Data",
+      "name" : "totalData",
+      "type" : "integer",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Record",
+      "name" : "record",
+      "caption" : "Record parameter on query",
+      "help" : "Create record JSON data (example : {p:0,c:100})",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

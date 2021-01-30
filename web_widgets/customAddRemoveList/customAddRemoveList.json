@@ -1,0 +1,51 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customAddRemoveList",
+  "name" : "addRemoveList",
+  "lastUpdate" : 1611890830127,
+  "template" : "@customAddRemoveList.tpl.html",
+  "controller" : "@customAddRemoveList.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "List Source",
+      "name" : "listSource",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Selected Source",
+      "name" : "selectedSource",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "List Result",
+      "name" : "listResult",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "SelectedResult",
+      "name" : "selectedResult",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Display",
+      "name" : "display",
+      "type" : "choice",
+      "defaultValue" : "Vertical",
+      "choiceValues" : [
+        "Vertical",
+        "Horizontal"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

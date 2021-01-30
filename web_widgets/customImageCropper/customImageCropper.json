@@ -1,0 +1,57 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customImageCropper",
+  "name" : "imageCropper",
+  "lastUpdate" : 1611890828977,
+  "template" : "@customImageCropper.tpl.html",
+  "controller" : "@customImageCropper.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Failed Response",
+      "name" : "failedResponse",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Area Type",
+      "name" : "areaType",
+      "type" : "choice",
+      "defaultValue" : "circle",
+      "choiceValues" : [
+        "circle",
+        "rectangle",
+        "square"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "2fd841fe-447f-45c8-9822-5c7a856ebe21",
+      "name" : "img-crop.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "9fdc1dae-57ca-4967-83f2-53d9e356be3f",
+      "name" : "img-crop.css",
+      "type" : "css",
+      "order" : 3,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [
+    "ngImgCrop"
+  ],
+  "type" : "widget",
+  "hasHelp" : false
+}

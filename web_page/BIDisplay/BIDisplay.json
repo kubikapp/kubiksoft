@@ -1,0 +1,80 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.46",
+  "id" : "BIDisplay",
+  "name" : "BIDisplay",
+  "lastUpdate" : 1611890829423,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "URL" : {
+            "type" : "expression",
+            "value" : "embedUrl"
+          },
+          "width" : {
+            "type" : "expression",
+            "value" : "width"
+          },
+          "height" : {
+            "type" : "expression",
+            "value" : "height"
+          }
+        },
+        "reference" : "bb11c29f-f32f-45e1-b032-90ade6aace24",
+        "hasValidationError" : false,
+        "id" : "customIframe"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "9f31237f-b7b7-4a18-9711-c6c12e5ad45f",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "embedUrl" : {
+      "type" : "urlparameter",
+      "value" : [
+        "embedUrl"
+      ],
+      "exposed" : false
+    },
+    "width" : {
+      "type" : "urlparameter",
+      "value" : [
+        "width"
+      ],
+      "exposed" : false
+    },
+    "height" : {
+      "type" : "urlparameter",
+      "value" : [
+        "height"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "f97e27c0-0164-4ac0-95b5-1661c0447c22",
+  "type" : "page",
+  "description" : "Dashboard display",
+  "displayName" : "Display BI Dashboard"
+}

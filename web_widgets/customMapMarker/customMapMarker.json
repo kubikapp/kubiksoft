@@ -1,0 +1,38 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.50",
+  "id" : "customMapMarker",
+  "name" : "mapMarker",
+  "lastUpdate" : 1611890830314,
+  "template" : "@customMapMarker.tpl.html",
+  "controller" : "@customMapMarker.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Position",
+      "name" : "position",
+      "type" : "text",
+      "defaultValue" : "",
+      "bond" : "variable"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "b734187b-4593-4e2e-9d3e-78830ed8f803",
+      "name" : "map.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "524a479b-e524-4ff8-83cf-a2837100a3da",
+      "name" : "https://maps.googleapis.com/maps/api/js?key=AIzaSyDU330D7A7iv50z25wOCrsGr-alAzDqP1U",
+      "type" : "js",
+      "order" : 1,
+      "external" : true
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

@@ -1,0 +1,152 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customAngularChartjs",
+  "name" : "angularChartjs",
+  "lastUpdate" : 1611890830157,
+  "template" : "@customAngularChartjs.tpl.html",
+  "controller" : "@customAngularChartjs.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Chart Type",
+      "name" : "type",
+      "type" : "choice",
+      "defaultValue" : "pie",
+      "choiceValues" : [
+        "bar",
+        "horizontalBar",
+        "pie",
+        "doughnut",
+        "line",
+        "radar"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Chart Title",
+      "name" : "title",
+      "type" : "text",
+      "defaultValue" : "Chart Name",
+      "bond" : "constant"
+    },
+    {
+      "label" : "Chart Series",
+      "name" : "series",
+      "type" : "collection",
+      "defaultValue" : [
+        "Series A"
+      ],
+      "choiceValues" : [
+        "default",
+        "series1"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Chart Labels",
+      "name" : "labels",
+      "type" : "collection",
+      "defaultValue" : [
+        "Label 1",
+        "Label 2",
+        "Label 3"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Show Legend",
+      "name" : "legend",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
+    },
+    {
+      "label" : "Legend Position",
+      "name" : "position",
+      "type" : "choice",
+      "defaultValue" : "right",
+      "choiceValues" : [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Data",
+      "name" : "data",
+      "caption" : "[10,20,30] for pie and doughnut or [[10,20,30],[20,30,40]] for line / bar / horizontalBar",
+      "type" : "collection",
+      "defaultValue" : [
+        "10",
+        "30",
+        "60"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "X-Label",
+      "name" : "xLabel",
+      "caption" : "X axis label for bar, horizontalBar and line",
+      "type" : "text",
+      "bond" : "constant"
+    },
+    {
+      "label" : "Y-Label",
+      "name" : "yLabel",
+      "caption" : "Y axis label for bar, horizontalBar and line",
+      "type" : "text",
+      "bond" : "constant"
+    },
+    {
+      "label" : "Color Series",
+      "name" : "colorSeries",
+      "type" : "choice",
+      "defaultValue" : "Default",
+      "choiceValues" : [
+        "Default",
+        "Series 1",
+        "Series 2",
+        "Series 3",
+        "Series 4",
+        "Series 5",
+        "Series 6",
+        "Series 7",
+        "Series 8",
+        "Series 9",
+        "Series 10"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "d8cffbd9-2309-4ed5-8759-04e939cc76d2",
+      "name" : "Chart.min.js",
+      "type" : "js",
+      "order" : 7,
+      "external" : false
+    },
+    {
+      "id" : "6d4bc2ec-a90a-44a9-accc-3886290dd306",
+      "name" : "angular-chart.min.js",
+      "type" : "js",
+      "order" : 8,
+      "external" : false
+    },
+    {
+      "id" : "3eb5ba41-d0ce-428b-a27a-d1691b85b664",
+      "name" : "script-ui.js",
+      "type" : "js",
+      "order" : 9,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [
+    "chart.js"
+  ],
+  "type" : "widget",
+  "hasHelp" : false
+}

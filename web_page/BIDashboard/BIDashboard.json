@@ -1,0 +1,310 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.46",
+  "id" : "BIDashboard",
+  "name" : "BIDashboard",
+  "lastUpdate" : 1611890829350,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "header" : {
+            "type" : "constant"
+          },
+          "subHeader" : {
+            "type" : "constant"
+          },
+          "iconClass" : {
+            "type" : "constant"
+          },
+          "showReturn" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "returnURL" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "eafb0aa7-35d3-4744-b560-9e754aabf0a4",
+        "hasValidationError" : false,
+        "id" : "customHeader"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "552034a0-c19b-498b-9b75-c9f422450c7c",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "listDashboard.length==0"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "062a68a0-1084-4975-acdd-b4035538ad1d",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "col-lg-3 col-md-4 col-sm-4"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable",
+                  "value" : "listDashboard | orderBy : 'name'"
+                }
+              },
+              "reference" : "68dfed80-6ae3-4add-9244-17f7caea3202",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "title" : {
+                        "type" : "expression",
+                        "value" : "$item.name"
+                      },
+                      "background" : {
+                        "type" : "constant",
+                        "value" : "#022a50"
+                      },
+                      "url" : {
+                        "type" : "expression",
+                        "value" : "'/bonita/apps/analisissawit/display/?embedUrl='+$item.embedUrl+'&width='+$item.width +'&height='+$item.height"
+                      },
+                      "icon" : {
+                        "type" : "constant",
+                        "value" : "chart-bar"
+                      }
+                    },
+                    "reference" : "68b57278-b3d6-4d76-b931-0947fcd8b08e",
+                    "hasValidationError" : false,
+                    "id" : "customCardMenu"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "listDashboard.length>0"
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "60b6ace6-7aea-49f6-91c2-42fe75942f84",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "4abb65ae-557c-4388-994c-3fc20261d2aa",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Default label"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<font size=1000 color='#E3E3E5'><br><i class=\"fas fa-chart-bar fa-3x\"></i><br><br></font><font size=60 color='#E3E3E5'>Display  Dashboard</font><br><br><br>"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "d14083ca-05cb-48f2-98f7-74145f33c62f",
+              "hasValidationError" : false,
+              "id" : "pbText"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "808c5eb9-95fa-4c3d-b22f-de8439466217",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "0ec24320-4e4f-4056-b431-5cb27d37c479",
+      "name" : "stats.png",
+      "type" : "img",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listDashboard" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"find [kubik.conf.ExternalBI]\",\"businessObjectName\":\"ExternalBI\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"kubik.conf.ExternalBI\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"100\"}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "a362a4d6-598d-4598-bc56-4f5e9e9fff6e",
+  "type" : "page",
+  "description" : "Dashboard to display report analysis",
+  "displayName" : "Dashboard Report"
+}

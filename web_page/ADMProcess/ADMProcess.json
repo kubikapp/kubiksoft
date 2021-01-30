@@ -1,0 +1,1219 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.11.46",
+  "id" : "ADMProcess",
+  "name" : "ADMProcess",
+  "lastUpdate" : 1611890829221,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "header" : {
+            "type" : "constant",
+            "value" : "Process Access"
+          },
+          "subHeader" : {
+            "type" : "constant"
+          },
+          "iconClass" : {
+            "type" : "constant",
+            "value" : "fas fa-cube"
+          },
+          "showReturn" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "returnURL" : {
+            "type" : "constant"
+          }
+        },
+        "reference" : "9089b241-2a32-434a-9914-6a3306392dc8",
+        "hasValidationError" : false,
+        "id" : "customHeader"
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "d82393f0-4886-4193-947a-da0617a10c6a",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "7be9f6c9-115d-41fe-b301-b4fc1c9bf65d",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "<i class=\"fas fa-plus\"></i> Add"
+                  },
+                  "style" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "newValue" : {
+                    "type" : "expression",
+                    "value" : "{ \"appId\":null, \"groupId\":null,\"persistenceId_string\":null }"
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "appAccess.add"
+                  },
+                  "position" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "openModal" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : "addAccess"
+                  },
+                  "isCircle" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "4691925c-2f5e-4119-adc9-1860b6cf95e0",
+                "hasValidationError" : false,
+                "id" : "customButtonUpdate"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "processAccess.selected==null"
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "<i class=\"fas fa-edit\"></i> Set Access"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "right"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "warning"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Open modal"
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "dataToSend" : {
+                    "type" : "constant"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : ""
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : "setAccess"
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant",
+                    "value" : "Last"
+                  },
+                  "valueToAdd" : {
+                    "type" : "constant"
+                  },
+                  "removeItem" : {
+                    "type" : "variable"
+                  }
+                },
+                "reference" : "eb96bf38-a068-4319-9547-85592a51617c",
+                "hasValidationError" : false,
+                "id" : "pbButton"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "headers" : {
+                    "type" : "constant",
+                    "value" : [
+                      "Process Name",
+                      "Description",
+                      "Version",
+                      "Status"
+                    ]
+                  },
+                  "content" : {
+                    "type" : "expression",
+                    "value" : "listProcessData | orderBy : \"displayName\""
+                  },
+                  "columnsKey" : {
+                    "type" : "constant",
+                    "value" : [
+                      "displayName",
+                      "description",
+                      "version",
+                      "activationState"
+                    ]
+                  },
+                  "selectedRow" : {
+                    "type" : "variable",
+                    "value" : "processAccess.selected"
+                  },
+                  "striped" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "condensed" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "bordered" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "8b30b776-fa74-43c0-b9ee-4b262f44fff4",
+                "hasValidationError" : false,
+                "id" : "pbTable"
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "modalContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : "setAccess"
+          },
+          "size" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "animation" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "6afac93d-3df2-47c7-9072-0be57b71de14",
+        "hasValidationError" : false,
+        "id" : "pbModalContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "47f356be-d81e-41a9-8206-4a16f2cc01e7",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-header"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Set Actor {{processAccess.selected.displayName}}"
+                  },
+                  "level" : {
+                    "type" : "constant",
+                    "value" : "Level 4"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "01fa4042-c6cf-4117-bae0-8bb064738119",
+                "hasValidationError" : false,
+                "id" : "pbTitle"
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-body"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "c3e4779a-c2da-417f-9339-46038d1fe3e1",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Actor"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 3
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "Select an option"
+                        },
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "actor"
+                        },
+                        "displayedKey" : {
+                          "type" : "constant",
+                          "value" : "displayName"
+                        },
+                        "returnedKey" : {
+                          "type" : "constant",
+                          "value" : "id"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "selectedActor"
+                        }
+                      },
+                      "reference" : "69d17571-595a-4998-aeb8-44624a76c4ff",
+                      "hasValidationError" : false,
+                      "id" : "pbSelect"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "selectedActor==null"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "headers" : {
+                          "type" : "constant",
+                          "value" : [
+                            "Group",
+                            "Role"
+                          ]
+                        },
+                        "content" : {
+                          "type" : "expression",
+                          "value" : "actorMember"
+                        },
+                        "columnsKey" : {
+                          "type" : "constant",
+                          "value" : [
+                            "group_id.displayName",
+                            "role_id==\"-1\" ? \"All\" : role_id.displayName"
+                          ]
+                        },
+                        "selectedRow" : {
+                          "type" : "variable",
+                          "value" : ""
+                        },
+                        "striped" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "condensed" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "bordered" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "6180744d-dd38-4bb0-bab1-119c3c6d681c",
+                      "hasValidationError" : false,
+                      "id" : "pbTable"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-footer"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "ee6b77fc-2f72-42e1-9257-5f3018dda096",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "CLOSE"
+                        },
+                        "style" : {
+                          "type" : "constant",
+                          "value" : "default"
+                        },
+                        "newValue" : {
+                          "type" : "expression",
+                          "value" : "{ \"appId\":null, \"groupId\":null,\"persistenceId_string\":null }"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "appAccess.add"
+                        },
+                        "position" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "openModal" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "isCircle" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "dca28530-dc88-43f8-b113-dc84b1072615",
+                      "hasValidationError" : false,
+                      "id" : "customButtonUpdate"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "expression",
+                          "value" : "!validateAppAccess.add.valid"
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "SAVE"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "success"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "POST"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation",
+                          "value" : "{{actionUrl.add}}"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : "response.status"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "{\"applicationInput\":appAccess.add,\"actionInput\":\"add\"}"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : "response.success"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "response.failed"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "#"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "listAppAccess"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Last"
+                        },
+                        "valueToAdd" : {
+                          "type" : "expression",
+                          "value" : "appAccess.add"
+                        },
+                        "removeItem" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "ce20b52b-d2fc-4749-ad1b-2424e4a82a0f",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    }
+                  ]
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "modalContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : "editAccess"
+          },
+          "size" : {
+            "type" : "constant",
+            "value" : "sm"
+          },
+          "animation" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "6778a5f2-47f7-44e5-88cf-d1a330b5d4f4",
+        "hasValidationError" : false,
+        "id" : "pbModalContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "ae8d4903-99ac-4ac1-b4ec-be4d12b1b8d2",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-header"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "e1bc25be-a587-4fdc-88da-f4835e950455",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Delete Application Access ?"
+                        },
+                        "level" : {
+                          "type" : "constant",
+                          "value" : "Level 4"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "273c33e9-1d68-4358-a387-8f5b1205bb9d",
+                      "hasValidationError" : false,
+                      "id" : "pbTitle"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-body"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "d6e82094-9eda-4881-915f-af58ff715854",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Are you sure want to delete selected application access ?"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        }
+                      },
+                      "reference" : "5158db6c-4405-4d58-889e-3a114b3b9215",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ]
+                ]
+              }
+            ],
+            [
+              {
+                "type" : "container",
+                "dimension" : {
+                  "xs" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "modal-footer"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "repeatedCollection" : {
+                    "type" : "variable",
+                    "value" : ""
+                  }
+                },
+                "reference" : "2b7b8787-96e1-4523-a3ae-ed66d07e993f",
+                "hasValidationError" : false,
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "CANCEL"
+                        },
+                        "style" : {
+                          "type" : "constant",
+                          "value" : "default"
+                        },
+                        "newValue" : {
+                          "type" : "expression",
+                          "value" : "null"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "appAccess.selected"
+                        },
+                        "position" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "openModal" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "modalId" : {
+                          "type" : "constant"
+                        },
+                        "isCircle" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : true
+                        }
+                      },
+                      "reference" : "8189c7a4-f86f-4731-a78e-46edf678abb1",
+                      "hasValidationError" : false,
+                      "id" : "customButtonUpdate"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Yes DELETE"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "right"
+                        },
+                        "buttonStyle" : {
+                          "type" : "constant",
+                          "value" : "danger"
+                        },
+                        "action" : {
+                          "type" : "constant",
+                          "value" : "POST"
+                        },
+                        "assign" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "url" : {
+                          "type" : "interpolation",
+                          "value" : "{{actionUrl.add}}"
+                        },
+                        "responseStatusCode" : {
+                          "type" : "variable",
+                          "value" : "response.status"
+                        },
+                        "dataToSend" : {
+                          "type" : "expression",
+                          "value" : "{\"applicationInput\":appAccess.selected,\"actionInput\":\"delete\"}"
+                        },
+                        "dataFromSuccess" : {
+                          "type" : "variable",
+                          "value" : "response.success"
+                        },
+                        "closeOnSuccess" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "dataFromError" : {
+                          "type" : "variable",
+                          "value" : "response.failed"
+                        },
+                        "targetUrlOnSuccess" : {
+                          "type" : "interpolation",
+                          "value" : "#"
+                        },
+                        "collectionToModify" : {
+                          "type" : "variable",
+                          "value" : "listAppAccessData"
+                        },
+                        "modalId" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "collectionPosition" : {
+                          "type" : "constant",
+                          "value" : "Item"
+                        },
+                        "valueToAdd" : {
+                          "type" : "constant"
+                        },
+                        "removeItem" : {
+                          "type" : "variable",
+                          "value" : "appAccess.selected"
+                        }
+                      },
+                      "reference" : "a57c3196-32a0-43f7-87f8-5dfb20c54c9d",
+                      "hasValidationError" : false,
+                      "id" : "pbButton"
+                    }
+                  ]
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "d7e7c4ee-7747-48c8-9b0d-c1186d6bef0f",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "7eff7a92-0a00-4701-a090-799810667600",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "listGroup" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/group?p=0&c=100&d=parent_group_id&o=name%20ASC"
+      ],
+      "exposed" : false
+    },
+    "validateAppAccess" : {
+      "type" : "expression",
+      "value" : [
+        "var validate = {",
+        "    \"add\":{",
+        "        \"valid\":true,",
+        "        \"description\":\"\"",
+        "    }",
+        "};",
+        "",
+        "if($data.appAccess.add.groupId==null || $data.appAccess.add.appId==null){",
+        "    validate.add.valid = false;",
+        "    validate.add.description = \"All fields are mandatory\";",
+        "}",
+        "",
+        "var i=0;",
+        "",
+        "for(i=0;i<$data.listAppAccess.length;i++){",
+        "    var access = $data.listAppAccess[i];",
+        "    ",
+        "    if(access.appId == $data.appAccess.add.appId && access.groupId == $data.appAccess.add.groupId){",
+        "        validate.add.valid = false;",
+        "        validate.add.description = \"Configuration already exist\";",
+        "    }",
+        "}",
+        "",
+        "return validate;"
+      ],
+      "exposed" : false
+    },
+    "actionUrl" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "    add:getProcessURL($data.prcApplication[0],true,false),",
+        "    delete:getProcessURL($data.prcApplication[0],true,false)",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "response" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"status\":null,",
+        "    \"success\":null,",
+        "    \"failed\":null",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "listProcess" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?p=0&c=500"
+      ],
+      "exposed" : false
+    },
+    "listProcessData" : {
+      "type" : "expression",
+      "value" : [
+        "var i=0, listData=[];",
+        "",
+        "for(i=0;i<$data.listProcess.length;i++){",
+        "    var process = $data.listProcess[i];",
+        "    ",
+        "    if(process.actorinitiatorid!=-1){",
+        "        ",
+        "        listData.push(",
+        "            {",
+        "                id:process.id,",
+        "                actorId:process.actorinitiatorid,",
+        "                displayName:process.displayName,",
+        "                description:process.description,",
+        "                activationState:process.activationState,",
+        "                version:process.version",
+        "            }",
+        "            ",
+        "            );",
+        "        ",
+        "    }",
+        "}",
+        "",
+        "return listData;"
+      ],
+      "exposed" : false
+    },
+    "processAccess" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"add\":null,",
+        "    \"selected\":null",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "actorMember" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/actorMember?p=0&c=500&f=actor_id={{selectedActor}}&d=role_id&d=group_id&d=user_id"
+      ],
+      "exposed" : false
+    },
+    "actor" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/actor?p=0&c=500&f=process_id={{processAccess.selected.id}}"
+      ],
+      "exposed" : false
+    },
+    "selectedActor" : {
+      "type" : "constant",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "e747e0b3-e6b7-40fa-b247-2390e63cfae6",
+  "type" : "page",
+  "description" : "Configure process access",
+  "displayName" : "Process"
+}

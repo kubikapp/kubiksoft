@@ -1,0 +1,55 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.10.12",
+  "id" : "customCardMenu",
+  "name" : "cardMenu",
+  "lastUpdate" : 1611890829342,
+  "template" : "@customCardMenu.tpl.html",
+  "controller" : "@customCardMenu.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Title",
+      "name" : "title",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Background",
+      "name" : "background",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "URL",
+      "name" : "url",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Icon",
+      "name" : "icon",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "e27ed8bf-d085-45bc-918b-1504608b763e",
+      "name" : "cardmenu.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "792cb713-c179-4806-a996-618f9934e29b",
+      "name" : "fontawesome-all.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}
