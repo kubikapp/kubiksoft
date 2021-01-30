@@ -1,0 +1,17 @@
+<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>
+
+<div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
+<canvas id="canvas" hidden></canvas>
+<div id="output" hidden>
+<div id="outputMessage">No QR code detected.</div>
+<div hidden>
+    <b>Data:</b> <span ng-change="gotoUrl();" ng-model="outputData" id="outputData"></span>
+    <hr>
+    <div align="center">
+        <button type="button" class="btn btn-{{properties.style}}" ng-click="captureQR()"> {{properties.buttonLabel}}</button>
+    </div>
+    <br>
+</div>
+
+</div>
+

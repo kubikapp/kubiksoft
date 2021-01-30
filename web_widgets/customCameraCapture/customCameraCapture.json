@@ -1,0 +1,46 @@
+{
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.7.49",
+  "id" : "customCameraCapture",
+  "name" : "cameraCapture",
+  "lastUpdate" : 1611982749559,
+  "template" : "@customCameraCapture.tpl.html",
+  "controller" : "@customCameraCapture.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Take Picture",
+      "bond" : "constant"
+    },
+    {
+      "label" : "Snapshot Data",
+      "name" : "snapshotData",
+      "type" : "text",
+      "bond" : "variable"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "e28bb08b-a99a-4595-a1bd-3e23c9f159fc",
+      "name" : "modal.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "71e86db5-73cf-495b-a1dd-a41762860a14",
+      "name" : "webcam.min.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [
+    "webcam"
+  ],
+  "type" : "widget",
+  "hasHelp" : false
+}

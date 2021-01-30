@@ -1,0 +1,23 @@
+<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>
+
+<div class="alert alert-error ng-scope" ng-show="webcamError" style="">
+    <span>Webcam could not be started. Did you give access to it?</span>
+</div>
+<div>
+    <button class="btn btn-primary" ng-click='isShow=!isShow;properties.snapshotData=null;'><i class="glyphicon glyphicon-camera"></i> {{properties.label}}</button>
+</div>
+<br/>
+
+<div ng-if='isShow' class="Modal-overlay">
+    <center>
+        <webcam channel="channel" 
+            on-streaming="onSuccess()" 
+            on-error="onError(err)" 
+            on-stream="onStream(stream)">
+        </webcam>
+        <button class="btn btn-primary" ng-click="makeSnapshot()"><i class="glyphicon glyphicon-camera"></i> Capture</button>
+    </center>
+</div>
+<div>
+    <canvas id="snapshot" height='300' width='300'></canvas>
+</div>
